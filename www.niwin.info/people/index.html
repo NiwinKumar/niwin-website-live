@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        html.page-transition-pending .page-shell,
+        html.page-transition-pending .experiment-page,
+        html.page-transition-pending .side-nav {
+          opacity: 0;
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add("page-transition-pending");
+        try {
+          if (sessionStorage.getItem("portfolio:route-transition")) {
+            root.classList.add("page-transition-from-route");
+          }
+        } catch {}
+        window.setTimeout(function () {
+          root.classList.remove("page-transition-pending", "page-transition-from-route");
+        }, 1800);
+      })();
+    </script>
+    <title>People — Niwin Kumar</title>
+    <meta
+      name="description"
+      content="A personal map of people Niwin rates, trusts, learns from, and keeps coming back to."
+    />
+    <link rel="canonical" href="https://niwin.info/people/" />
+    <meta name="author" content="Niwin Kumar" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" type="image/png" href="../favicon-dark.png" />
+    <link rel="icon" type="image/png" href="../favicon-light.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" href="../favicon-dark.png" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://niwin.info/people/" />
+    <meta property="og:title" content="People — Niwin Kumar" />
+    <meta property="og:description" content="A messy, incomplete map of people Niwin rates, trusts, learns from, and keeps coming back to." />
+    <meta property="og:image" content="https://niwin.info/assets/og.jpg" />
+    <meta property="og:image:alt" content="“I would have hired Niwin asap” — Alan Turing" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Niwin Kumar" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@niwinkumar" />
+    <meta name="twitter:creator" content="@niwinkumar" />
+    <meta name="twitter:title" content="People — Niwin Kumar" />
+    <meta name="twitter:description" content="A messy, incomplete map of people Niwin rates, trusts, learns from, and keeps coming back to." />
+    <meta name="twitter:image" content="https://niwin.info/assets/og.jpg" />
+
+    <script>
+      (function () {
+        document.documentElement.classList.add("hover-cold");
+        var fx = -1, fy = -1;
+        function arm() {
+          document.documentElement.classList.remove("hover-cold");
+          window.removeEventListener("pointermove", onMove);
+          window.removeEventListener("pointerdown", arm);
+        }
+        function onMove(e) {
+          if (fx < 0) { fx = e.clientX; fy = e.clientY; return; }
+          if (Math.abs(e.clientX - fx) + Math.abs(e.clientY - fy) > 12) arm();
+        }
+        window.addEventListener("pointermove", onMove, { passive: true });
+        window.addEventListener("pointerdown", arm, { passive: true });
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Swanky+and+Moo+Moo&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="../assets/people-BceW1ghb.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-DfS4ul37.js">
+    <link rel="modulepreload" crossorigin href="../assets/react-DMBAmnPT.js">
+    <link rel="modulepreload" crossorigin href="../assets/jsx-runtime-CBvI2dA1.js">
+    <link rel="modulepreload" crossorigin href="../assets/footerPageScroll-D4eaqTNS.js">
+    <link rel="modulepreload" crossorigin href="../assets/content-H5xKOsW4.js">
+    <link rel="stylesheet" crossorigin href="../assets/footerPageScroll-mZLg2cX1.css">
+    <link rel="stylesheet" crossorigin href="../assets/people-Diy6Y8nT.css">
+  </head>
+  <body class="people-route">
+    <aside class="side-nav" aria-label="Primary">
+      <a class="side-nav__link" href="../index.html#top">Home</a>
+      <a class="side-nav__link" href="../work/index.html">Work</a>
+      <a class="side-nav__link is-active" href="index.html">People</a>
+      <a class="side-nav__link" href="../writing/index.html">Writing</a>
+    </aside>
+
+    <main class="page-shell people-shell">
+      <div class="people-page-content">
+        <section class="people-intro" aria-labelledby="people-title">
+          <h1 id="people-title">My people.</h1>
+          <p>
+            A messy, incomplete list of people I rate, trust, learn from, and keep coming back to.
+            Some are friends, some are mentors, some are people whose work changed how I think.
+            Not a hiring page. More like a small map of my internet.
+          </p>
+        </section>
+
+        <section class="people-hero" aria-label="People">
+          <img
+            class="people-hero__image"
+            src="../assets/people-hero-last-supper.png"
+            alt="A monochrome gathering of people around a long table"
+          />
+        </section>
+
+        <section class="people-directory" aria-label="People Niwin rates">
+          <nav class="people-filters" aria-label="People categories">
+            <a class="people-filter is-active" href="index.html#all" data-people-filter="all">All</a>
+            <a class="people-filter" href="index.html#design" data-people-filter="design">Design</a>
+            <a class="people-filter" href="index.html#code" data-people-filter="code">Code</a>
+            <a class="people-filter" href="index.html#3d" data-people-filter="3d">3D</a>
+            <a class="people-filter" href="index.html#growth" data-people-filter="growth">Growth</a>
+            <a class="people-filter" href="index.html#community" data-people-filter="community">Community</a>
+          </nav>
+
+          <div class="people-list" data-people-list aria-live="polite">
+            <p class="people-list__state">Loading people...</p>
+          </div>
+        </section>
+
+        <footer class="footer-signature" aria-label="Site footer">
+          <hr class="footer-signature__rule" />
+          <div class="footer-signature__row">
+            <a class="footer-signature__sign" href="../index.html" aria-label="Niwin">
+              <img src="../assets/footer/niwin-sign.svg" alt="" />
+            </a>
+            <nav class="footer-signature__nav" aria-label="Footer">
+              <a href="../index.html">Home</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="../work/index.html">Work</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="index.html">People</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="../writing/index.html">Writings</a>
+            </nav>
+            <div class="footer-signature__social">
+              <a href="https://github.com/niwinkumar" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <img src="../assets/footer/icon-github.svg" alt="" />
+              </a>
+              <a href="https://linkedin.com/in/niwinkumar" target="_blank" rel="noreferrer" aria-label="X">
+                <img src="../assets/footer/icon-x.svg" alt="" />
+              </a>
+              <a href="mailto:niwinkumar77@gmail.com" aria-label="Email">
+                <img src="../assets/footer/icon-mail.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <section class="contact people-contact section-anchor" id="writings">
+        <canvas class="contact__clouds" data-cloud-footer aria-hidden="true"></canvas>
+        <div class="contact__sticky">
+          <div class="contact__grid" aria-hidden="true"></div>
+          <div class="contact__copy">
+            <p class="contact__lede">
+              <a class="contact__lede-strong" href="mailto:niwinkumar77@gmail.com">Get in touch</a>
+              <span class="contact__lede-muted"> — for thoughtful design work, early products, weird experiments, or internet rabbit holes. © 2026 · sky shifts with the hour</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>

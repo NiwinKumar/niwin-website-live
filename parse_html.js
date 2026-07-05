@@ -1,0 +1,11 @@
+const fs = require('fs');
+const html = fs.readFileSync('site.html', 'utf-8');
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const dom = new JSDOM(html);
+console.log("== TITLES ==");
+console.log(dom.window.document.title);
+console.log("== LINKS ==");
+dom.window.document.querySelectorAll('link').forEach(l => console.log(l.href));
+console.log("== SCRIPTS ==");
+dom.window.document.querySelectorAll('script').forEach(s => console.log(s.src || s.innerHTML.substring(0, 50)));

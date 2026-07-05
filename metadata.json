@@ -1,0 +1,6 @@
+{
+  "name": "Niwin Kumar Portfolio Clone",
+  "description": "A perfect 1-to-1 replica of anirudh.info, serving exact static files.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

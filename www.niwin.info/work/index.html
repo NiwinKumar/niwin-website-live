@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        html.page-transition-pending .page-shell,
+        html.page-transition-pending .experiment-page,
+        html.page-transition-pending .side-nav {
+          opacity: 0;
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add("page-transition-pending");
+        try {
+          if (sessionStorage.getItem("portfolio:route-transition")) {
+            root.classList.add("page-transition-from-route");
+          }
+        } catch {}
+        window.setTimeout(function () {
+          root.classList.remove("page-transition-pending", "page-transition-from-route");
+        }, 1800);
+      })();
+    </script>
+    <title>Work — Niwin Kumar</title>
+    <meta
+      name="description"
+      content="Selected product design work across crypto, AI, and social software. Intentional design that starts human and moves outward."
+    />
+    <link rel="canonical" href="https://niwin.info/work/" />
+    <meta name="author" content="Niwin Kumar" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" type="image/png" href="../favicon-dark.png" />
+    <link rel="icon" type="image/png" href="../favicon-light.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" href="../favicon-dark.png" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://niwin.info/work/" />
+    <meta property="og:title" content="Work — Niwin Kumar" />
+    <meta property="og:description" content="Selected product design work across crypto, AI, and social software." />
+    <meta property="og:image" content="https://niwin.info/assets/og.jpg" />
+    <meta property="og:image:alt" content="“I would have hired Niwin asap” — Alan Turing" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Niwin Kumar" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@niwinkumar" />
+    <meta name="twitter:creator" content="@niwinkumar" />
+    <meta name="twitter:title" content="Work — Niwin Kumar" />
+    <meta name="twitter:description" content="Selected product design work across crypto, AI, and social software." />
+    <meta name="twitter:image" content="https://niwin.info/assets/og.jpg" />
+
+    <script>
+      (function () {
+        document.documentElement.classList.add("hover-cold");
+        var fx = -1, fy = -1;
+        function arm() {
+          document.documentElement.classList.remove("hover-cold");
+          window.removeEventListener("pointermove", onMove);
+          window.removeEventListener("pointerdown", arm);
+        }
+        function onMove(e) {
+          if (fx < 0) { fx = e.clientX; fy = e.clientY; return; }
+          if (Math.abs(e.clientX - fx) + Math.abs(e.clientY - fy) > 12) arm();
+        }
+        window.addEventListener("pointermove", onMove, { passive: true });
+        window.addEventListener("pointerdown", arm, { passive: true });
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Swanky+and+Moo+Moo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="../assets/work-safe-ecosystem.poster.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="video"
+      href="../assets/work-safe-ecosystem.min.mp4"
+      type="video/mp4"
+      fetchpriority="high"
+    />
+    <script type="module" crossorigin src="../assets/work-ojdqhQlZ.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-DfS4ul37.js">
+    <link rel="modulepreload" crossorigin href="../assets/react-DMBAmnPT.js">
+    <link rel="modulepreload" crossorigin href="../assets/jsx-runtime-CBvI2dA1.js">
+    <link rel="modulepreload" crossorigin href="../assets/footerPageScroll-D4eaqTNS.js">
+    <link rel="modulepreload" crossorigin href="../assets/content-H5xKOsW4.js">
+    <link rel="stylesheet" crossorigin href="../assets/footerPageScroll-mZLg2cX1.css">
+    <link rel="stylesheet" crossorigin href="../assets/work-Dq9nNGEK.css">
+  </head>
+  <body class="work-route">
+    <aside class="side-nav" aria-label="Primary">
+      <a class="side-nav__link" href="../index.html#top">Home</a>
+      <a class="side-nav__link is-active" href="index.html">Work</a>
+      <a class="side-nav__link" href="../people/index.html">People</a>
+      <a class="side-nav__link" href="../writing/index.html">Writing</a>
+    </aside>
+
+    <main class="page-shell work-shell">
+      <div class="work-page-content">
+        <section class="work-intro" aria-labelledby="work-title">
+          <h1 id="work-title">Work.</h1>
+          <p>
+            Intentional design that starts human and moves outward. Always learning and
+            improving.
+          </p>
+
+          <ul class="work-logo-strip" aria-label="Selected teams">
+            <li class="work-logo-chip work-logo-chip--safe">
+              <img src="../assets/work-logo-safe-mark.svg" alt="" aria-hidden="true" />
+              <img src="../assets/work-logo-safe-word.svg" alt="Safe" />
+            </li>
+            <li class="work-logo-chip">
+              <img class="work-logo-chip__openblock" src="../assets/work-logo-openblock.svg" alt="OpenBlock" />
+            </li>
+            <li class="work-logo-chip work-logo-chip--eido">
+              <img src="../assets/work-logo-eido-mark.svg" alt="" aria-hidden="true" />
+              <span>EIDO Labs</span>
+            </li>
+            <li class="work-logo-chip">
+              <img class="work-logo-chip__cruize" src="../assets/work-logo-cruize.svg" alt="Cruize" />
+            </li>
+            <li class="work-logo-chip work-logo-chip--pills">
+              <img src="../assets/work-logo-pills-mark.svg" alt="" aria-hidden="true" />
+              <span><b>Pills</b><i>Trade</i></span>
+            </li>
+            <li class="work-logo-chip">
+              <img class="work-logo-chip__biconomy" src="../assets/work-logo-biconomy.png" alt="Biconomy" />
+            </li>
+            <li class="work-logo-chip">
+              <img class="work-logo-chip__tenk" src="../assets/work-logo-10kdesigners.png" alt="10K Designers" />
+            </li>
+            <li class="work-logo-chip">
+              <span class="work-logo-chip__vibeheads">
+                <img src="../assets/work-logo-vibeheads.png" alt="VibeHeads" />
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="work-gallery" aria-label="Selected work">
+          <article class="work-card work-card--wide" data-project-card data-project="safe" role="button" tabindex="0">
+            <figure class="work-card__media">
+              <video
+                poster="../assets/work-safe-ecosystem.poster.webp"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                fetchpriority="high"
+                aria-label="Safe Ecosystem product timeline preview"
+              >
+                <source src="../assets/work-safe-ecosystem.webm" type="video/webm" />
+                <source src="../assets/work-safe-ecosystem.min.mp4" type="video/mp4" />
+              </video>
+            </figure>
+            <div class="work-card__meta">
+              <div>
+                <h2>Safe Ecosystem</h2>
+                <p>Multisig Wallet</p>
+              </div>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-project-card data-project="eido" role="button" tabindex="0">
+            <div class="work-card__media work-card__media--quiet" aria-hidden="true"></div>
+            <div class="work-card__meta">
+              <div>
+                <h2>Eido Labs</h2>
+                <p>DeFAI</p>
+              </div>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-project-card data-project="pills" role="button" tabindex="0">
+            <div class="work-card__media work-card__media--quiet" aria-hidden="true"></div>
+            <div class="work-card__meta">
+              <div>
+                <h2>Lmao.Fun</h2>
+                <p>Social trading</p>
+              </div>
+              <span>2024</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-project-card data-project="openblock" role="button" tabindex="0">
+            <figure class="work-card__media">
+              <img src="../assets/work-gallery-openblock.png" alt="OpenBlock Labs interface preview" loading="lazy" decoding="async" fetchpriority="low" />
+            </figure>
+            <div class="work-card__meta">
+              <div>
+                <h2>OpenBlock Labs</h2>
+                <p>Data intelligence for crypto</p>
+              </div>
+              <span>2023</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-hover-video-card data-project-card data-project="tike" role="button" tabindex="0">
+            <figure class="work-card__media">
+              <video
+                src="../assets/work-gallery-tike.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                fetchpriority="low"
+                poster="../assets/work-gallery-tike.png"
+                aria-label="Tike Social product preview"
+                data-hover-video
+              ></video>
+            </figure>
+            <div class="work-card__meta">
+              <div>
+                <h2>Tike Social</h2>
+                <p>Onchain social network</p>
+              </div>
+              <span>2024</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-project-card data-project="cruize" role="button" tabindex="0">
+            <figure class="work-card__media">
+              <img src="../assets/work-gallery-cruize.png" alt="Cruize Finance vault interface preview" loading="lazy" decoding="async" fetchpriority="low" />
+            </figure>
+            <div class="work-card__meta">
+              <div>
+                <h2>Cruize Finance</h2>
+                <p>DeFi protocol</p>
+              </div>
+              <span>2022</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-project-card data-project="misc" role="button" tabindex="0">
+            <figure class="work-card__media work-card__media--collage">
+              <span class="work-collage__item work-collage__item--one">
+                <img src="../assets/work-gallery-misc-1.png" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+              </span>
+              <span class="work-collage__item work-collage__item--two">
+                <img src="../assets/work-gallery-misc-2.png" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+              </span>
+              <span class="work-collage__item work-collage__item--three">
+                <img src="../assets/work-gallery-misc-3.png" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+              </span>
+              <span class="work-collage__item work-collage__item--four">
+                <img src="../assets/work-gallery-misc-4.png" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+              </span>
+            </figure>
+            <div class="work-card__meta">
+              <div>
+                <h2>Misc Work Gallery</h2>
+                <p>Product experiments</p>
+              </div>
+              <span>Selected</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="work-project-detail" data-project-detail hidden aria-live="polite">
+          <div class="work-project-detail__drawer" role="dialog" aria-modal="true" aria-labelledby="project-drawer-title">
+            <div class="work-project-detail__bar">
+              <div class="work-project-detail__bar-main">
+                <div class="work-project-detail__bar-icon" aria-hidden="true">
+                  <img data-project-logo alt="" hidden />
+                </div>
+                <div class="work-project-detail__bar-copy">
+                  <h2 id="project-drawer-title" data-project-title>Tike Social</h2>
+                  <p data-project-kicker>Selected work</p>
+                </div>
+              </div>
+              <div class="work-project-detail__bar-actions">
+                <a class="work-project-detail__bar-cta" data-project-primary-link target="_blank" rel="noreferrer noopener" hidden>
+                  <span data-project-primary-label>Open website</span>
+                  <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <button class="work-project-detail__close" type="button" data-project-close aria-label="Close project drawer">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="work-project-detail__inner">
+              <section class="work-project-overview" aria-labelledby="project-overview-heading">
+                <h3 id="project-overview-heading">Overview</h3>
+                <div class="work-project-overview__body" data-project-overview>
+                  Built product and visual explorations for Tike Social, an onchain social product
+                  focused on creator profiles, feeds, and lightweight community surfaces.
+                </div>
+              </section>
+
+              <div class="work-project-media-stack" data-project-media></div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer-signature" aria-label="Site footer">
+          <hr class="footer-signature__rule" />
+          <div class="footer-signature__row">
+            <a class="footer-signature__sign" href="../index.html" aria-label="Niwin">
+              <img src="../assets/footer/niwin-sign.svg" alt="" />
+            </a>
+            <nav class="footer-signature__nav" aria-label="Footer">
+              <a href="../index.html">Home</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="index.html">Work</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="../people/index.html">People</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="../writing/index.html">Writings</a>
+            </nav>
+            <div class="footer-signature__social">
+              <a href="https://github.com/niwinkumar" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <img src="../assets/footer/icon-github.svg" alt="" />
+              </a>
+              <a href="https://linkedin.com/in/niwinkumar" target="_blank" rel="noreferrer" aria-label="X">
+                <img src="../assets/footer/icon-x.svg" alt="" />
+              </a>
+              <a href="mailto:niwinkumar77@gmail.com" aria-label="Email">
+                <img src="../assets/footer/icon-mail.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <section class="contact work-contact section-anchor" id="writings">
+        <canvas class="contact__clouds" data-cloud-footer aria-hidden="true"></canvas>
+        <div class="contact__sticky">
+          <div class="contact__grid" aria-hidden="true"></div>
+          <div class="contact__copy">
+            <p class="contact__lede">
+              <a class="contact__lede-strong" href="mailto:niwinkumar77@gmail.com">Get in touch</a>
+              <span class="contact__lede-muted"> — for thoughtful design work, early products, weird experiments, or internet rabbit holes. © 2026 · sky shifts with the hour</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>

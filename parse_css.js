@@ -1,0 +1,11 @@
+const fs = require('fs');
+const css = fs.readFileSync('./www.anirudh.info/assets/footerPageScroll-mZLg2cX1.css', 'utf-8');
+const matches = css.match(/[^{}]*hero__shadow-map[^{}]*\{[^}]*\}/g);
+const match2 = css.match(/[^{}]*hero__sunny-video[^{}]*\{[^}]*\}/g);
+const match3 = css.match(/[^{}]*hero__sunny-wash[^{}]*\{[^}]*\}/g);
+console.log("== SHADOW MAP ==");
+console.log(matches ? matches.join('\n') : "Not found");
+console.log("== SUNNY VIDEO ==");
+console.log(match2 ? match2.join('\n') : "Not found");
+console.log("== SUNNY WASH ==");
+console.log(match3 ? match3.join('\n') : "Not found");

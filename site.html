@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        html.page-transition-pending .page-shell,
+        html.page-transition-pending .experiment-page,
+        html.page-transition-pending .side-nav {
+          opacity: 0;
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add("page-transition-pending");
+        try {
+          if (sessionStorage.getItem("portfolio:route-transition")) {
+            root.classList.add("page-transition-from-route");
+          }
+        } catch {}
+        window.setTimeout(function () {
+          root.classList.remove("page-transition-pending", "page-transition-from-route");
+        }, 1800);
+      })();
+    </script>
+    <title>Anirudh Pareek — designing for hyperonline startups</title>
+    <meta
+      name="description"
+      content="I design products, systems, and interfaces for crypto-native and hyperonline startups."
+    />
+    <link rel="canonical" href="https://anirudh.info/" />
+    <meta name="author" content="Anirudh Pareek" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" type="image/png" href="/favicon-dark.png" />
+    <link rel="icon" type="image/png" href="/favicon-light.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" href="/favicon-dark.png" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anirudh.info/" />
+    <meta property="og:title" content="Anirudh Pareek — designing for hyperonline startups" />
+    <meta property="og:description" content="I design products, systems, and interfaces for crypto-native and hyperonline startups." />
+    <meta property="og:image" content="https://anirudh.info/assets/og.jpg" />
+    <meta property="og:image:alt" content="“I would have hired Anirudh asap” — Albert Einstein" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Anirudh Pareek" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AnirudhP" />
+    <meta name="twitter:creator" content="@AnirudhP" />
+    <meta name="twitter:title" content="Anirudh Pareek — designing for hyperonline startups" />
+    <meta name="twitter:description" content="I design products, systems, and interfaces for crypto-native and hyperonline startups." />
+    <meta name="twitter:image" content="https://anirudh.info/assets/og.jpg" />
+    <meta name="twitter:image:alt" content="“I would have hired Anirudh asap” — Albert Einstein" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Swanky+and+Moo+Moo&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Hover-cold guard: prevents the item under the cursor at first paint
+      // from instantly entering hover state. CSS gates hover effects behind
+      // :root:not(.hover-cold). Class is removed once the cursor has moved
+      // > 12px or on the first pointerdown.
+      (function () {
+        document.documentElement.classList.add("hover-cold");
+        var fx = -1, fy = -1;
+        function arm() {
+          document.documentElement.classList.remove("hover-cold");
+          window.removeEventListener("pointermove", onMove);
+          window.removeEventListener("pointerdown", arm);
+        }
+        function onMove(e) {
+          if (fx < 0) { fx = e.clientX; fy = e.clientY; return; }
+          if (Math.abs(e.clientX - fx) + Math.abs(e.clientY - fy) > 12) arm();
+        }
+        window.addEventListener("pointermove", onMove, { passive: true });
+        window.addEventListener("pointerdown", arm, { passive: true });
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/main-DI4sZ3-2.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-DMBAmnPT.js">
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-DfS4ul37.js">
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-CBvI2dA1.js">
+    <link rel="modulepreload" crossorigin href="/assets/footerPageScroll-D4eaqTNS.js">
+    <link rel="modulepreload" crossorigin href="/assets/content-H5xKOsW4.js">
+    <link rel="modulepreload" crossorigin href="/assets/dist-DccsHRTh.js">
+    <link rel="stylesheet" crossorigin href="/assets/footerPageScroll-mZLg2cX1.css">
+  </head>
+  <body>
+    <aside class="side-nav" aria-label="Primary">
+      <a class="side-nav__link is-active" href="#top">Home</a>
+      <a class="side-nav__link" href="/work/">Work</a>
+      <a class="side-nav__link" href="/people/">People</a>
+      <a class="side-nav__link" href="/writing/">Writing</a>
+    </aside>
+
+    <main class="page-shell">
+      <section class="hero section-anchor" id="top">
+        <div class="hero__grid" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <div class="hero__portrait-frame">
+            <img
+              class="hero__portrait"
+              src="/assets/hero-illustration.png"
+              alt="Illustrated portrait of Anirudh seated cross-legged"
+            />
+          </div>
+
+          <div class="hero__intro-card">
+            <p class="hero__intro">
+              <span class="hero__intro-line">
+                <span class="hero__intro-name">Anirudh Pareek</span>
+                <span class="hero__intro-muted">&nbsp;— designing best-in-class</span>
+              </span>
+              <span class="hero__intro-line hero__intro-muted">
+                products for hyperonline startups
+              </span>
+            </p>
+
+            <div class="hero__actions">
+              <button class="button button--dark" data-copy-email type="button">Copy email</button>
+              <a class="button button--soft" href="https://drive.google.com/file/d/1UgSMP1DXXH50TnsvR7BWxLT2w3k7ImR9/view?usp=sharing" target="_blank" rel="noreferrer">
+                Resume
+              </a>
+            </div>
+            <p class="hero__hint" id="toast" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <span class="hero__angle hero__angle--left" aria-hidden="true">60°</span>
+        <span class="hero__angle hero__angle--mid" aria-hidden="true">45°</span>
+        <span class="hero__angle hero__angle--right" aria-hidden="true">45°</span>
+        <div class="hero__shadow-map" aria-hidden="true">
+          <video
+            class="hero__sunny-video"
+            src="https://theme-switch.pages.dev/assets/leaves.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+          <div class="hero__sunny-wash"></div>
+        </div>
+      </section>
+
+      <div class="page-content">
+        <div class="page-content__main">
+        <section class="editorial" id="information" data-editorial>
+          <div class="editorial__progress" aria-hidden="true">
+            <span class="editorial__progress-track"></span>
+            <span class="editorial__progress-fill"></span>
+          </div>
+
+          <a class="editorial__cta" href="/work/">
+            <span>See work</span>
+            <span class="editorial__cta-arrow" aria-hidden="true">↘</span>
+          </a>
+
+          <div class="about-canvas" aria-label="About Anirudh Pareek">
+            <section class="about-group about-group--headline" data-scroll-reveal>
+              <span class="reading-line" data-reading-line>
+                I build for the internet’s most online
+                <span class="word word--gradient-italic word--corners">corners.</span>
+              </span>
+            </section>
+
+            <section class="about-group about-group--places" data-scroll-reveal>
+              <span class="reading-line" data-reading-line>
+                The places where software, speculation, and
+              </span>
+              <span class="reading-line" data-reading-line>
+                culture <span class="word word--blur">blur</span> into one another
+              </span>
+            </section>
+
+            <section class="about-group about-group--consequence" data-scroll-reveal>
+              <span class="reading-line" data-reading-line>
+                I like interfaces with
+                <span class="word word--scribble-band"><mark class="word--scribble-band__mark" data-highlight data-color="rgba(17, 17, 17, 0.42)">consequence</mark><span class="word__typed-dots">..</span></span>
+              </span>
+              <span class="reading-line" data-reading-line>
+                Where every action carries weight, whether that is
+              </span>
+              <span class="reading-line" data-reading-line>
+                capital, coordination, or attention.
+              </span>
+            </section>
+
+            <section class="about-group about-group--complexity" data-scroll-reveal>
+              <span class="reading-line" data-reading-line>
+                My work is about making
+                <span class="about-inline-run">
+                  <span class="inline-scribble" aria-hidden="true"></span>
+                  <span class="word word--complexity">complexity</span>
+                </span>
+                feel
+              </span>
+              <span class="reading-line" data-reading-line>
+                <span class="word word--desirable-tag">desirable</span>
+                without dumbing it down.
+              </span>
+            </section>
+
+            <section class="about-group about-group--closing" data-scroll-reveal>
+              <span class="reading-line" data-reading-line>
+                Usually for crypto natives. Always for <button class="people-blob-trigger" type="button" data-people-blobs-trigger aria-expanded="false" aria-controls="people-blob-field"><mark class="word--highlight-underline" data-highlight data-color="rgba(17, 17, 17, 0.72)" data-mark-type="underline">people</mark></button>.
+              </span>
+            </section>
+
+            <section
+              class="about-group about-group--experience section-anchor"
+              id="people"
+              data-scroll-reveal
+            >
+              <span class="reading-line" data-reading-line>
+                Before this, I spent the last few years
+              </span>
+              <span class="reading-line" data-reading-line>
+                building
+                <span class="products-run">
+                  <span
+                    class="startup-stack"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Flip product logos"
+                    data-active-index="2"
+                    data-active-company="Eido Labs"
+                  >
+                    <span class="startup-card startup-card--tike" data-company="Tike"></span>
+                    <span class="startup-card startup-card--pills" data-company="Pills Trade"></span>
+                    <span class="startup-card startup-card--eido" data-company="Eido Labs"></span>
+                  </span>
+                  <span class="word word--products">products</span>
+                </span>
+                spanning trading, AI,
+              </span>
+              <span class="reading-line" data-reading-line>
+                and social crypto, mostly steering product,
+              </span>
+              <span class="reading-line" data-reading-line>
+                design, and direction.
+              </span>
+            </section>
+
+            <section class="about-group about-group--teams" data-scroll-reveal>
+              <span class="reading-line" data-reading-line>
+                Before that, I worked with teams like
+                <span class="team-badges" aria-hidden="true">
+                  <span class="team-badge team-badge--green" data-company="Safe"></span>
+                  <span class="team-badge team-badge--teal" data-company="OpenBlock"></span>
+                  <span class="team-badge team-badge--ink" data-company="Cruize"></span>
+                </span>
+              </span>
+              <span class="reading-line" data-reading-line>
+                designing products and systems for the
+              </span>
+              <span class="reading-line" data-reading-line>
+                onchain world.
+              </span>
+            </section>
+          </div>
+        </section>
+
+        <section class="profile-note">
+          <div id="tv-scroll-experience"></div>
+
+          <p class="profile-note__paragraph" data-scroll-reveal>
+            <span class="reading-line" data-reading-line>
+              I'm currently
+              <a class="profile-note__link profile-note__link--highlight profile-note__link--vibecoding" href="https://github.com/anirudhpareek" target="_blank" rel="noreferrer">
+                <mark class="word--highlight-underline" data-highlight data-color="rgba(17, 17, 17, 0.72)" data-mark-type="underline">vibecoding</mark>
+                <span class="vibe-activity-card" aria-hidden="true">
+                  <span class="vibe-activity-card__graph">
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                    <span class="vibe-activity-card__bar"></span>
+                  </span>
+                  <span class="vibe-activity-card__meta">
+                    <span>GitHub activity</span>
+                    <span>@anirudhpareek</span>
+                  </span>
+                </span>
+              </a>
+              and playing
+              <button class="profile-note__link profile-note__link--highlight profile-note__link--poker" type="button" data-sound="poker-chips">
+                <span class="profile-note__link-text"><mark class="word--highlight-underline" data-highlight data-color="rgba(17, 17, 17, 0.72)" data-mark-type="underline">poker</mark></span>
+                <span class="poker-aces-card" aria-hidden="true">
+                  <span class="poker-aces-card__felt">
+                    <span class="poker-aces-card__playing-card poker-aces-card__playing-card--spade">
+                      <span class="poker-aces-card__rank">A</span>
+                      <span class="poker-aces-card__suit">♠</span>
+                    </span>
+                    <span class="poker-aces-card__playing-card poker-aces-card__playing-card--heart">
+                      <span class="poker-aces-card__rank">A</span>
+                      <span class="poker-aces-card__suit">♥</span>
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </span>
+            <span class="reading-line" data-reading-line>
+              while looking for the next role.
+            </span>
+            <span class="reading-line" data-reading-line>
+              Looking to keep building exciting things
+            </span>
+            <span class="reading-line" data-reading-line>
+              with people I enjoy working with.
+            </span>
+            <span class="reading-line" data-reading-line>
+              Reach out via
+              <a class="profile-note__link profile-note__link--highlight" href="mailto:anirudh.p.bu@gmail.com"><mark class="word--highlight-underline" data-highlight data-color="rgba(17, 17, 17, 0.72)" data-mark-type="underline">email</mark></a>
+              or dm on
+              <a class="profile-note__link profile-note__link--highlight profile-note__link--twitter" href="https://x.com/AnirudhP" target="_blank" rel="noreferrer"><mark class="word--highlight-underline" data-highlight data-color="rgba(17, 17, 17, 0.72)" data-mark-type="underline">X</mark></a>.
+            </span>
+          </p>
+        </section>
+        </div>
+
+        <div class="pre-footer-shell">
+        <div class="pre-footer-shell__inner">
+        <section class="panel section-anchor" id="work">
+          <div class="panel__tabs" role="tablist" aria-label="Portfolio categories">
+            <button
+              class="panel__tab is-active"
+              data-tab="teams"
+              role="tab"
+              aria-controls="timeline"
+              aria-selected="true"
+              tabindex="0"
+              type="button"
+            >
+              Teams
+            </button>
+            <span class="panel__dot" aria-hidden="true"></span>
+            <button
+              class="panel__tab"
+              data-tab="experiments"
+              role="tab"
+              aria-controls="timeline"
+              aria-selected="false"
+              tabindex="-1"
+              type="button"
+            >
+              Experiments
+            </button>
+          </div>
+          <div class="panel__body">
+            <div class="panel__table" id="timeline" role="tabpanel" aria-live="polite"></div>
+            <aside class="teams-companion" aria-label="Teams illustration">
+              <img
+                class="teams-companion__image"
+                src="/assets/teams-companion.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </aside>
+          </div>
+        </section>
+
+        <footer class="footer-signature" aria-label="Site footer">
+          <hr class="footer-signature__rule" />
+          <div class="footer-signature__row">
+            <a class="footer-signature__sign" href="#top" aria-label="Anirudh">
+              <img src="/assets/footer/anirudh-sign.svg" alt="" />
+            </a>
+            <nav class="footer-signature__nav" aria-label="Footer">
+              <a href="#top">Home</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="/work/">Work</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="/people/">People</a>
+              <span class="footer-signature__dot" aria-hidden="true"></span>
+              <a href="/writing/">Writings</a>
+            </nav>
+            <div class="footer-signature__social">
+              <a href="https://github.com/anirudhpareek" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <img src="/assets/footer/icon-github.svg" alt="" />
+              </a>
+              <a href="https://x.com/AnirudhP" target="_blank" rel="noreferrer" aria-label="X">
+                <img src="/assets/footer/icon-x.svg" alt="" />
+              </a>
+              <a href="mailto:anirudh.p.bu@gmail.com" aria-label="Email">
+                <img src="/assets/footer/icon-mail.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </footer>
+        </div>
+        </div>
+      </div>
+
+      <section class="experiment-detail" data-experiment-detail hidden aria-live="polite">
+        <div class="experiment-detail__drawer" role="dialog" aria-modal="true" aria-labelledby="experiment-drawer-title">
+          <div class="experiment-detail__bar">
+            <div class="experiment-detail__bar-main">
+              <div class="experiment-detail__bar-icon" aria-hidden="true">
+                <img data-experiment-logo alt="" hidden />
+              </div>
+              <div class="experiment-detail__bar-copy">
+                <h2 id="experiment-drawer-title" data-experiment-title>Experiment</h2>
+                <p data-experiment-bar-meta>Side experiment</p>
+              </div>
+            </div>
+            <div class="experiment-detail__bar-actions">
+              <a class="experiment-detail__bar-cta" data-experiment-primary-link target="_blank" rel="noreferrer noopener" hidden>
+                <span data-experiment-primary-label>Open project</span>
+                <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <button class="experiment-detail__close" type="button" data-experiment-close aria-label="Close experiment drawer">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="experiment-detail__inner">
+            <section class="experiment-detail__media-section" data-experiment-media-section hidden>
+              <div class="experiment-detail__media-stack" data-experiment-media></div>
+            </section>
+
+            <section class="experiment-detail__artifact" data-experiment-build-note hidden>
+              <div class="experiment-detail__artifact-copy">
+                <h3>Build note</h3>
+                <p class="experiment-detail__app-summary" data-experiment-overview></p>
+                <p class="experiment-detail__app-support" data-experiment-support hidden></p>
+                <p class="experiment-detail__build-note-text"></p>
+              </div>
+            </section>
+
+            <div class="experiment-detail__sections" data-experiment-sections></div>
+            <section class="experiment-detail__closing" data-experiment-closing hidden>
+              <p data-experiment-closing-note></p>
+              <div class="experiment-detail__notes" data-experiment-notes hidden></div>
+              <div class="experiment-detail__facts" data-experiment-facts aria-label="Experiment details"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section-anchor" id="writings">
+        <canvas class="contact__clouds" data-cloud-footer aria-hidden="true"></canvas>
+        <div class="contact__sticky">
+          <div class="contact__grid" aria-hidden="true"></div>
+          <div class="contact__copy">
+            <p class="contact__lede">
+              <a class="contact__lede-strong" href="mailto:anirudh.p.bu@gmail.com">Get in touch</a>
+              <span class="contact__lede-muted"> — for thoughtful design work, early products, weird experiments, or internet rabbit holes. © 2026 · sky shifts with the hour</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="people-blob-field" id="people-blob-field" data-people-blob-field hidden>
+      <button class="people-blob-field__scrim" type="button" data-people-blobs-close aria-label="Close people blobs"></button>
+      <button class="people-blob-field__label" type="button" data-people-blobs-close aria-label="Close people blobs">people</button>
+      <div class="people-blob-field__stage" aria-hidden="true">
+        <figure class="people-blob-card people-blob-card--soft-landscape" data-people-blob>
+          <img src="/assets/people-blobs/people-blob-01.gif" alt="" />
+        </figure>
+        <figure class="people-blob-card people-blob-card--landscape" data-people-blob>
+          <img src="/assets/people-blobs/people-blob-02.gif" alt="" />
+        </figure>
+        <figure class="people-blob-card people-blob-card--square" data-people-blob>
+          <img src="/assets/people-blobs/people-blob-03.gif" alt="" />
+        </figure>
+        <figure class="people-blob-card people-blob-card--square" data-people-blob>
+          <img src="/assets/people-blobs/people-blob-04.gif" alt="" />
+        </figure>
+        <figure class="people-blob-card people-blob-card--landscape" data-people-blob>
+          <img src="/assets/people-blobs/people-blob-05.gif" alt="" />
+        </figure>
+        <figure class="people-blob-card people-blob-card--wide" data-people-blob>
+          <video src="/assets/people-blobs/people-blob-06.mp4" muted loop playsinline preload="metadata"></video>
+        </figure>
+        <figure class="people-blob-card people-blob-card--soft-landscape" data-people-blob>
+          <video src="/assets/people-blobs/people-blob-07.mp4" muted loop playsinline preload="metadata"></video>
+        </figure>
+        <figure class="people-blob-card people-blob-card--cinema" data-people-blob>
+          <video src="/assets/people-blobs/people-blob-08.mp4" muted loop playsinline preload="metadata"></video>
+        </figure>
+      </div>
+    </div>
+
+  </body>
+</html>
