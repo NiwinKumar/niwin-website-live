@@ -1,0 +1,16 @@
+/* The fixed sky footer must fit Safari's visible viewport, including safe areas. */
+@media (max-width: 860px) {
+  .contact {
+    top: auto;
+    bottom: 0;
+    height: 100dvh;
+    min-height: 0;
+  }
+  .cloud-dialkit {
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    left: max(28px, env(safe-area-inset-left, 0px));
+  }
+  .contact__sticky {
+    padding-bottom: calc(108px + env(safe-area-inset-bottom, 0px));
+  }
+}
