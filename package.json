@@ -1,14 +1,14 @@
 {
-  "name": "react-example",
+  "name": "niwin-website-live",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "node server.js",
-    "build": "mkdir -p dist && cp -r www.niwin.info/* dist/",
+    "build": "node scripts/build.mjs",
     "preview": "node server.js",
-    "clean": "rm -rf dist server.js",
-    "lint": "echo 'No linting needed'"
+    "clean": "node scripts/build.mjs --clean",
+    "check": "node --check server.js && node --check scripts/build.mjs && node --check parse_css.js && node --check parse_html.js"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

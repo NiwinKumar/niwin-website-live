@@ -1,5 +1,5 @@
-const fs = require('fs');
-const css = fs.readFileSync('./www.anirudh.info/assets/footerPageScroll-mZLg2cX1.css', 'utf-8');
+import fs from 'node:fs';
+const css = fs.readFileSync('./www.niwin.info/assets/footerPageScroll-mZLg2cX1.css', 'utf-8');
 const matches = css.match(/[^{}]*hero__shadow-map[^{}]*\{[^}]*\}/g);
 const match2 = css.match(/[^{}]*hero__sunny-video[^{}]*\{[^}]*\}/g);
 const match3 = css.match(/[^{}]*hero__sunny-wash[^{}]*\{[^}]*\}/g);

@@ -1,7 +1,6 @@
-const fs = require('fs');
-const html = fs.readFileSync('site.html', 'utf-8');
-const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
+import fs from 'node:fs';
+const html = fs.readFileSync('www.niwin.info/index.html', 'utf-8');
+import { JSDOM } from 'jsdom';
 const dom = new JSDOM(html);
 console.log("== TITLES ==");
 console.log(dom.window.document.title);

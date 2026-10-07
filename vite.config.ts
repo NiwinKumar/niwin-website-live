@@ -3,7 +3,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    root: 'www.anirudh.info',
+    root: 'www.niwin.info',
     plugins: [],
     resolve: {
       alias: {
