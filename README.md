@@ -32,9 +32,19 @@ Build replaces `dist/` with a fresh copy of the website; deploy that folder to a
 
 All website files are local except Google Fonts, the decorative video at `theme-switch.pages.dev`, and the bundled Vercel Analytics integration. External portfolio and social links are navigation destinations.
 
-## Content to review
+## Personal content
 
-Some exported project descriptions and collaborator links still need a personal content review. There are 106 references to absent `/uploads/` media files in the bundled portfolio data; those assets need to be supplied or the corresponding content removed. A local image audit also found 32 pre-existing corrupt PNG/GIF/WebP files; these need original assets restored. The signature was recovered from the valid copy embedded in the home page. Do not invent project history or substitute unrelated media.
+Work and the home timeline use facts supplied in `Niwin_Kumar_Resume (1).pdf`: HappyFox experience, two engineering projects, education, and skills. Metrics are from the resume, not independently audited. The supplied resume was read locally; the PDF and phone number are not published in this repository.
+
+People currently shows the two supported work and learning circles, HappyFox and VIT Chennai. Named profiles should be added only with Niwin’s own notes.
+
+Writing contains only “you never know what stays with someone,” supplied by Niwin, dated October 1, 2026. Its original URL is linked without tracking or share tokens. The editorial copy is in `content/you-never-know-what-stays-with-someone.md`; the public article is in `www.niwin.info/writing/index.html`.
+
+The homepage timeline data is editable in `www.niwin.info/assets/content-H5xKOsW4.js`. Work, People, and Writing are semantic HTML pages styled by `assets/personal-content.css`; `assets/personal-pages.js` retains shared navigation and footer effects. Borrowed profiles, project narratives, essays, and their absent `/uploads/` references have been removed.
+
+## Remaining assets
+
+The previous image audit found 32 corrupt legacy image files. The replacement Work, People, and Writing content does not use those files; original homepage illustration assets still need attention. The shared effects bundle also references absent `client-QfQKsH9N.js`; this pre-existing optional React sound-provider import can report a console error without preventing these content pages from rendering.
 
 ## Git
 

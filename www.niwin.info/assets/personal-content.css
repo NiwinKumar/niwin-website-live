@@ -1,0 +1,90 @@
+.personal-content {
+  width: min(700px, calc(100% - 56px));
+  margin-inline: auto;
+  padding: 150px 0 80px;
+  color: #232320;
+  font-family: Inter, sans-serif;
+}
+.personal-intro { margin-bottom: 64px; }
+.personal-eyebrow {
+  margin: 0 0 14px;
+  color: #72716b;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.personal-content a { color: inherit; text-underline-offset: 4px; }
+.personal-content a:hover { color: #565a43; }
+.personal-intro h1 {
+  margin: 0 0 28px;
+  font: italic 64px/1.08 'Instrument Serif', serif;
+  letter-spacing: -.025em;
+}
+.personal-lede {
+  max-width: 630px;
+  margin: 0;
+  color: #64635d;
+  font: 26px/1.45 'Instrument Serif', serif;
+}
+.personal-section { margin: 0 0 48px; }
+.personal-section > h2 {
+  margin: 0 0 22px;
+  font: 32px/1.2 'Instrument Serif', serif;
+}
+.personal-card {
+  margin-bottom: 20px;
+  padding: 30px;
+  background: #f8f8f5;
+  border: 1px solid #e8e7e0;
+  border-radius: 16px;
+}
+.personal-card h2, .personal-card h3 {
+  margin: 0 0 10px;
+  font: 30px/1.2 'Instrument Serif', serif;
+  letter-spacing: -.015em;
+}
+.personal-subtitle { margin-top: -2px; color: #74736b; }
+.personal-section p, .personal-card li {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.personal-card p:last-child { margin-bottom: 0; }
+.personal-card ul { margin-bottom: 0; padding-left: 20px; }
+.personal-card li + li { margin-top: 8px; }
+.personal-note { padding-top: 24px; border-top: 1px solid #e8e7e0; }
+.personal-note p { font: 28px/1.45 'Instrument Serif', serif; }
+.personal-note a { font-size: 14px; }
+.personal-essay header { padding-bottom: 30px; border-bottom: 1px solid #e8e7e0; }
+.personal-essay h2 { margin: 0 0 16px; font: 46px/1.12 'Instrument Serif', serif; letter-spacing: -.02em; }
+.essay-subtitle { color: #74736b; font-size: 17px; line-height: 1.6; }
+.essay-meta { color: #74736b; font-size: 13px; line-height: 1.8; }
+.essay-body { padding-top: 24px; }
+.essay-body p { margin: 0 0 24px; font: 22px/1.65 'Instrument Serif', serif; }
+.essay-body p:first-child { color: #77766e; font-style: italic; }
+.essay-source { margin-top: 40px; padding-top: 24px; border-top: 1px solid #e8e7e0; font-size: 14px; }
+.work-route .footer-signature__sign img,
+.people-route .footer-signature__sign img,
+.writing-route .footer-signature__sign img { clip-path: none; }
+@media (max-width: 760px) {
+  .work-route .side-nav, .people-route .side-nav, .writing-route .side-nav {
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    right: 28px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    z-index: 5;
+  }
+  .personal-content { padding-top: 104px; padding-bottom: 48px; }
+  .personal-intro { margin-bottom: 40px; }
+  .personal-intro h1 { font-size: 48px; }
+  .personal-lede { font-size: 24px; }
+  .personal-card { padding: 24px; }
+  .personal-eyebrow { font-size: 11px; letter-spacing: .025em; }
+  .personal-card h2, .personal-card h3 { font-size: 28px; }
+  .personal-essay h2 { font-size: 38px; }
+  .essay-body p { font-size: 21px; }
+}
