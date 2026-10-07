@@ -20,6 +20,7 @@ The website served by `server.js` lives in `www.niwin.info/`:
 - `index.html`: home page
 - `work/index.html`, `writing/index.html`: other pages
 - `assets/`: local scripts, styles, images, and videos
+- `assets/home-responsive.css`: homepage layout for phone and tablet widths, including landscape
 
 These are exported static files, including bundled JavaScript. The placeholder React files in `src/` are not used by the current dev or build commands. Editing them will not update the website.
 

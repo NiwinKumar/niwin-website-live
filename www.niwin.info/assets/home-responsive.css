@@ -1,0 +1,94 @@
+/* Keep the desktop composition; use a contained portrait and natural flow on phones. */
+@media (max-width: 860px) {
+  .home-route .side-nav {
+    position: absolute;
+    top: calc(20px + env(safe-area-inset-top, 0px));
+    left: max(24px, env(safe-area-inset-left, 0px));
+    right: max(24px, env(safe-area-inset-right, 0px));
+    width: auto;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+  .home-route .side-nav__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 4px;
+    font-size: 18px;
+  }
+  .home-route .hero {
+    height: auto;
+    min-height: min(760px, 100svh);
+  }
+  .home-route .hero__content {
+    width: min(360px, calc(100% - 48px));
+    align-items: center;
+    gap: 18px;
+    padding-top: calc(86px + env(safe-area-inset-top, 0px));
+    padding-bottom: 80px;
+  }
+  .home-route .hero__portrait-frame {
+    width: min(268px, 64vw);
+    max-width: 100%;
+    aspect-ratio: 2 / 3;
+    flex: none;
+    transform: none;
+  }
+  .home-route .hero__intro-card {
+    width: 100%;
+    padding: 0;
+  }
+  .home-route .hero__intro {
+    width: 100%;
+    max-width: none;
+    font-size: 17px;
+    line-height: 1.6;
+    letter-spacing: -.025em;
+  }
+  .home-route .hero__actions {
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .home-route .hero__actions .button {
+    min-height: 44px;
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+  .home-route .hero__hint {
+    width: 100%;
+    margin-left: 0;
+  }
+  .home-route .page-content { --page-content-overlap: 32px; }
+}
+@media (max-width: 860px) and (max-height: 520px) and (orientation: landscape) {
+  .home-route .hero__content {
+    display: grid;
+    grid-template-columns: minmax(120px, 240px) minmax(0, 360px);
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 48px);
+    gap: 32px;
+    padding-top: calc(80px + env(safe-area-inset-top, 0px));
+    padding-bottom: 56px;
+  }
+  .home-route .hero__portrait-frame {
+    width: min(200px, 40svh);
+    justify-self: center;
+  }
+}
+/* Let the decorative word tag wrap like text in the narrow biography column. */
+@media (max-width: 860px) {
+  .home-route .reading-line .word--desirable-tag {
+    display: inline;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+    margin-right: .12em;
+    font-size: inherit;
+    transform: none;
+  }
+  .home-route .reading-line .word--desirable-tag::before,
+  .home-route .reading-line .word--desirable-tag::after { display: none; }
+}
