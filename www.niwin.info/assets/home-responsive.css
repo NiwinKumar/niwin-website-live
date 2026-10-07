@@ -97,3 +97,9 @@
 @media (max-width: 860px) {
   .home-route { --content-width: min(699px, calc(100vw - 56px)); }
 }
+
+/* Cast the existing moving leaf shadows across the portrait. */
+.home-route .hero__shadow-map {
+  z-index: 3;
+  mix-blend-mode: multiply;
+}
