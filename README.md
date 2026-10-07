@@ -18,7 +18,7 @@ Open http://localhost:3000. No Gemini key, AI Studio account, or environment fil
 The website served by `server.js` lives in `www.niwin.info/`:
 
 - `index.html`: home page
-- `work/index.html`, `people/index.html`, `writing/index.html`: other pages
+- `work/index.html`, `writing/index.html`: other pages
 - `assets/`: local scripts, styles, images, and videos
 
 These are exported static files, including bundled JavaScript. The placeholder React files in `src/` are not used by the current dev or build commands. Editing them will not update the website.
@@ -36,15 +36,17 @@ All website files are local except Google Fonts, the decorative video at `theme-
 
 Work and the home timeline use facts supplied in `Niwin_Kumar_Resume (1).pdf`: HappyFox experience, two engineering projects, education, and skills. Metrics are from the resume, not independently audited. The supplied resume was read locally; the PDF and phone number are not published in this repository.
 
-People currently shows the two supported work and learning circles, HappyFox and VIT Chennai. Named profiles should be added only with Niwin’s own notes.
+People is removed from the site and all navigation until there is personal content for it.
 
-Writing contains only “you never know what stays with someone,” supplied by Niwin, dated October 1, 2026. Its original URL is linked without tracking or share tokens. The editorial copy is in `content/you-never-know-what-stays-with-someone.md`; the public article is in `www.niwin.info/writing/index.html`.
+Writing contains only “you never know what stays with someone,” supplied by Niwin, dated October 1, 2026. Its original URL is linked without tracking or share tokens. The editorial copy is in `content/you-never-know-what-stays-with-someone.md`; the public article is in `www.niwin.info/writing/index.html`. The Writing page shows a title list with one entry, which opens the full article in a native modal drawer. Close, Escape, and backdrop click return to the list.
 
-The homepage timeline data is editable in `www.niwin.info/assets/content-H5xKOsW4.js`. Work, People, and Writing are semantic HTML pages styled by `assets/personal-content.css`; `assets/personal-pages.js` retains shared navigation and footer effects. Borrowed profiles, project narratives, essays, and their absent `/uploads/` references have been removed.
+The homepage timeline data is editable in `www.niwin.info/assets/content-H5xKOsW4.js`. Work and Writing are semantic HTML pages styled by `assets/personal-content.css`; `assets/personal-pages.js` retains shared navigation and footer effects. Borrowed profiles, project narratives, essays, and their absent `/uploads/` references have been removed.
 
 ## Remaining assets
 
-The previous image audit found 32 corrupt legacy image files. The replacement Work, People, and Writing content does not use those files; original homepage illustration assets still need attention. The shared effects bundle also references absent `client-QfQKsH9N.js`; this pre-existing optional React sound-provider import can report a console error without preventing these content pages from rendering.
+All local and embedded image references in the site’s HTML and CSS pass `npm run check`. The broken favicon PNG references were replaced with a local SVG monogram. Broken legacy CSS image references and the unused People popup were removed. Some unused legacy files are still in `assets/`; they are no longer requested by these image references.
+
+The shared effects bundle still references absent `client-QfQKsH9N.js`; this pre-existing optional React sound-provider import can report a console error without preventing these content pages from rendering.
 
 ## Git
 

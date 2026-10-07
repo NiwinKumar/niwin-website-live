@@ -8,7 +8,7 @@
     "build": "node scripts/build.mjs",
     "preview": "node server.js",
     "clean": "node scripts/build.mjs --clean",
-    "check": "node --check server.js && node --check scripts/build.mjs && node --check parse_css.js && node --check parse_html.js && node --check www.niwin.info/assets/personal-pages.js && node --check www.niwin.info/assets/content-H5xKOsW4.js"
+    "check": "node --check server.js && node --check scripts/build.mjs && node --check parse_css.js && node --check parse_html.js && node --check www.niwin.info/assets/personal-pages.js && node --check www.niwin.info/assets/content-H5xKOsW4.js && node scripts/check-images.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

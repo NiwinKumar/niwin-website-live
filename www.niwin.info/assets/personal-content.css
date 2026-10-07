@@ -88,3 +88,46 @@
   .personal-essay h2 { font-size: 38px; }
   .essay-body p { font-size: 21px; }
 }
+
+.writing-directory .writing-row {
+  font: 32px/1.3 'Instrument Serif', serif;
+  padding: 18px 0 24px;
+}
+.writing-row__title { display: block; }
+.writing-row__body { display: block; margin-top: 10px; }
+.writing-row__date {
+  display: block;
+  margin-top: 16px;
+  color: #77766e;
+  font: 12px/1.5 Inter, sans-serif;
+}
+dialog.writing-detail:not([open]) { display: none; }
+dialog.writing-detail {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #232320;
+}
+dialog.writing-detail::backdrop { background: #ffffff20; backdrop-filter: blur(16px); }
+.writing-detail__publication { font: 14px/1.5 'Instrument Serif', serif; color: #77766e; }
+.writing-detail__drawer .personal-essay { width: min(700px, calc(100% - 56px)); margin-inline: auto; padding: 40px 0 64px; }
+.writing-detail__bar { position: sticky; top: 0; }
+body.is-writing-drawer-open { overflow: hidden; }
+@media (max-width: 760px) {
+  .writing-directory .writing-row { font-size: 28px; }
+  .writing-detail__drawer .personal-essay { padding-top: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .writing-detail, .writing-detail__drawer { transition: none; }
+}
+.writing-directory .writing-row__title { font: 26px/1.35 'Instrument Serif', serif; }
+.writing-directory .writing-row__body { font: 16px/1.6 Inter, sans-serif; }
+.writing-directory .writing-row:focus-visible { outline: 2px solid #74736b; outline-offset: 6px; }
+@media (max-width: 760px) {
+  .writing-directory .writing-row__title { font-size: 24px; }
+  .writing-directory .writing-row__body { font-size: 14px; }
+}
