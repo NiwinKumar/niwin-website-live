@@ -1,6 +1,6 @@
 // Personal content sourced from Niwin’s supplied resume and article.
 export const n = "niwinkumar77@gmail.com";
-export const t = {
+const personalContent = {
   "teams": [
     {
       "year": "Jul 2025–present",
@@ -93,3 +93,13 @@ export const t = {
     }
   ]
 };
+
+// Company positioning stays separate from the founder’s employment history.
+export const t = document.body.classList.contains('company-route') ? {
+  ...personalContent,
+  teams: [
+    { year: 'Apps', name: 'Productivity & wellbeing', role: 'Thoughtful native experiences for everyday life' },
+    { year: 'AI', name: 'Tools that help you work', role: 'Assistants, automation, and useful developer workflows' },
+    { year: 'Systems', name: 'Connected platforms', role: 'Reliable backends, integrations, and the infrastructure behind the app' },
+  ],
+} : personalContent;
